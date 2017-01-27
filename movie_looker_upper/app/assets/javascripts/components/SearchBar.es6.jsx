@@ -1,7 +1,6 @@
 class SearchBar extends React.Component {
   constructor() {
     super()
-    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit(event) {
@@ -20,9 +19,9 @@ class SearchBar extends React.Component {
   render() {
     return(
       <section id="search">
-        <form id="search-bar-form" onSubmit={this.handleSubmit}>
+        <form id="search-bar-form" onSubmit={this.handleSubmit.bind(this)}>
           <input ref="searchBar" type="text" id="new-search" name="title" placeholder="Look up a movie!" />
-          <input type="submit" value="Search" />
+          <input type="submit" value="searchTitle" />
         </form>
       </section>
     )

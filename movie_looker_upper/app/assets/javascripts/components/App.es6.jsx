@@ -5,13 +5,13 @@ class App extends React.Component {
     this.movieInfo = this.movieInfo.bind(this)
   }
 
-  movieInfo(title) {
+  movieInfo(searchTitle) {
     $.ajax({
-      url: `http://www.omdbapi.com/?s${title}`
+      url: `http://www.omdbapi.com/?s=${searchTitle}`
     }).done((response) => {
       console.log(response)
-      debugger
-      this.setState({movies: response.SearchBar})
+      this.setState({movies: response.Search})
+      // debugger
     })
   }
 

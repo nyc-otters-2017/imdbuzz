@@ -5,20 +5,17 @@ class Return extends React.Component {
   }
 
   render() {
-    let { Title, Year, Genre, Director, imdbRating, Poster } = this.props.data
+    let { Title, Year, Poster } = this.props.data
     return(
-      <li className="movie-data">
-        <img className="poster" src={Poster} alt="" />
-        <div className="movie-content">
-          <p>
-            <span className="movie-title">Title: {Title}</span>
-            <span className="movie-year">Year Released: {Year}</span>
-            <span className="movie-genre">Genre: {Genre}</span>
-            <span className="movie-director">Director: {Director}</span>
-            <span className="movie-rating">IMDB Rating: {imdbRating}</span>
-          </p>
-        </div>
-      </li>
+      <div className="movie-content">
+        <li className="movie-data">
+            <p>
+              <span className="movie-title">Title: {Title}</span><br />
+              <span className="movie-year">Year Released: {Year}</span><br />
+            </p>
+          <img className="poster" src={Poster} alt="" />
+        </li>
+      </div>
     )
   }
 }
