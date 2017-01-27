@@ -4,6 +4,6 @@ class StaticController < ApplicationController
 
   def show
     @imdb_id = params[:id]
-    render component: 'Movie' 
+    render component: 'Movie', props: {imdb_id: @imdb_id} 
   end
 end
