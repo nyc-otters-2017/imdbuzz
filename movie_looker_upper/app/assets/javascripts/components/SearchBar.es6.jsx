@@ -6,9 +6,16 @@ class SearchBar extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log("sdfsfs")
+    let searchInput = this.refs.searchBar;
+    this.props.movieInfo(searchInput.value);
+    searchInput.value = '';
   }
 
+  handleChange(event) {
+    console.log(event)
+    let searchInput = this.refs.searchBar
+    this.props.movieInfo(searchInput.value)
+  }
 
   render() {
     return(
